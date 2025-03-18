@@ -15,13 +15,13 @@ toevoegbtn.addEventListener("click", () => {
 
 const filterLeeftijd = document.querySelector("#filterLeeftijd")
 const ouder = document.querySelector("#ouder")
-const jonger = docuement.querySelector("#jonger")
+const jonger = document.querySelector("#jonger")
 const lijstNamen = document.querySelector("#lijstNamen")
 
+const filterLeeftijdValue = filterLeeftijd.value
+
 ouder.addEventListener("click", () => {
-  gebruikers.forEach((namen) => {
-    lijstNamen.innerHTML = namen.login
-  })
+  gebruikers.filter(filterLeeftijdValue)
 })
 jonger.addEventListener("click", () => {
     gebruikers.forEach((namen) => {
